@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Asrfly.Code;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,24 @@ namespace Asrfly
 {
     public partial class Main : Form
     {
+        private readonly PageManager pageManager;
         public Main()
         {
             InitializeComponent();
+            pageManager = new PageManager(this);
+
+            // Make Home Page as a Start Page
+            pageManager.LoadPage(Gui.HomeGui.HomeUserControl.Instance());
+
         }
+        #region Events
+        private void buttonHome_Click(object sender, EventArgs e)
+        {
+            // Load Home Page
+            pageManager.LoadPage(Gui.HomeGui.HomeUserControl.Instance());
+        }
+        #endregion
+
+      
     }
 }

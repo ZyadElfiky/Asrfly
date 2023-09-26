@@ -46,6 +46,26 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Code\MessageCollection.cs" />
+    <Compile Include="Code\PageManager.cs" />
+    <Compile Include="Gui\CategoriesGui\AddCategoryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gui\CategoriesGui\AddCategoryForm.Designer.cs">
+      <DependentUpon>AddCategoryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\CategoriesGui\CategoryUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Gui\CategoriesGui\CategoryUserControl.Designer.cs">
+      <DependentUpon>CategoryUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\HomeGui\HomeUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Gui\HomeGui\HomeUserControl.Designer.cs">
+      <DependentUpon>HomeUserControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -54,6 +74,18 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Gui\CategoriesGui\AddCategoryForm.resx">
+      <DependentUpon>AddCategoryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\CategoriesGui\CategoryUserControl.resx">
+      <DependentUpon>CategoryUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\HomeGui\HomeUserControl.resx">
+      <DependentUpon>HomeUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -62,6 +94,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -76,9 +109,33 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Code\" />
-    <Folder Include="Gui\HomeGui\" />
+    <None Include="Resources\Home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\About_1.png" />
+    <None Include="Resources\Add.png" />
+    <Content Include="Resources\Categorize_1.png" />
+    <Content Include="Resources\Conference.png" />
+    <None Include="Resources\Delete.png" />
+    <None Include="Resources\Edit.png" />
+    <None Include="Resources\Export CSV.png" />
+    <Content Include="Resources\Help.png" />
+    <None Include="Resources\Input.png" />
+    <Content Include="Resources\Logout.png" />
+    <None Include="Resources\Output.png" />
+    <Content Include="Resources\People.png" />
+    <Content Include="Resources\Project Management.png" />
+    <None Include="Resources\Search.png" />
+    <None Include="Resources\Search_1.png" />
+    <None Include="Resources\Save.png" />
+    <None Include="Resources\Save_1.png" />
+    <None Include="Resources\Save_2.png" />
+    <Content Include="Resources\Settings.png" />
+    <None Include="Resources\Smart_1.png" />
+    <None Include="Resources\Smart.png" />
+    <Content Include="Resources\Users.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

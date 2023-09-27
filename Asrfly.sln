@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33403.182
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Asrfly", "Asrfly\Asrfly.csproj", "{37EAD5FF-C9C4-4A96-9C2A-550832D13111}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Asrfly1", "Asrfly\Asrfly1.csproj", "{37EAD5FF-C9C4-4A96-9C2A-550832D13111}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Asrfly.Core", "Asrfly.Core\Asrfly.Core.csproj", "{97FB1E40-2274-48C6-8606-FBC072DE6E01}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Asrfly.Core", "Asrfly.Core\Asrfly.Core.csproj", "{97FB1E40-2274-48C6-8606-FBC072DE6E01}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Asrfly.Data", "Asrfly.Data\Asrfly.Data.csproj", "{E7FC1238-719D-44BD-AE2A-7FFC30295BEE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Asrfly.Data", "Asrfly.Data\Asrfly.Data.csproj", "{E7FC1238-719D-44BD-AE2A-7FFC30295BEE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Asrfly.Tests", "Asrfly.Tests\Asrfly.Tests.csproj", "{51FFC489-F832-48D5-9A90-CD32DFDA9523}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Asrfly.Tests", "Asrfly.Tests\Asrfly.Tests.csproj", "{51FFC489-F832-48D5-9A90-CD32DFDA9523}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Asrfly", "WinFormsApp1\Asrfly.csproj", "{ED78B9DD-5957-408C-837E-F2F77E76C052}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{51FFC489-F832-48D5-9A90-CD32DFDA9523}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{51FFC489-F832-48D5-9A90-CD32DFDA9523}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{51FFC489-F832-48D5-9A90-CD32DFDA9523}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED78B9DD-5957-408C-837E-F2F77E76C052}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED78B9DD-5957-408C-837E-F2F77E76C052}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED78B9DD-5957-408C-837E-F2F77E76C052}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED78B9DD-5957-408C-837E-F2F77E76C052}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

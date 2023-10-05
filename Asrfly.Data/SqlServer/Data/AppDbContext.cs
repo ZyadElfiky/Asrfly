@@ -9,6 +9,9 @@ namespace Asrfly.Data.SqlServer.Data
 
         public DbSet<Categories> Categories { get; set; }
         public DbSet<SystemRecords> SystemRecords { get; set; }
+        public DbSet<Customers> Customers { get; set; }
+        public DbSet<Suppliers> Suppliers { get; set; }
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             base.OnConfiguring(optionsBuilder);

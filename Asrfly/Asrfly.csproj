@@ -23,12 +23,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="Gui\GuiCustomers\AddCustomerForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="Gui\GuiCustomers\CustomerUserControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
     <Compile Update="Properties\Resources.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>

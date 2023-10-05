@@ -100,6 +100,7 @@
             this.buttonCustomers.TabIndex = 2;
             this.buttonCustomers.Text = "العملاء";
             this.buttonCustomers.UseVisualStyleBackColor = true;
+            this.buttonCustomers.Click += new System.EventHandler(this.buttonCustomers_Click);
             // 
             // buttonSuppliers
             // 
@@ -201,7 +202,7 @@
             this.ClientSize = new System.Drawing.Size(1264, 681);
             this.Controls.Add(this.panelContainer);
             this.Controls.Add(this.flowLayoutPanel1);
-            this.Font = new System.Drawing.Font("Cairo", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Cairo", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
             this.Name = "Main";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;

@@ -1,4 +1,4 @@
-﻿namespace Asrfly.Gui.CategoriesGui
+﻿namespace Asrfly.Gui.GuiCategories
 {
     partial class AddCategoryForm
     {
@@ -29,7 +29,11 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.buttonSave = new System.Windows.Forms.Button();
+            this.buttonSaveAndClose = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.richTextBoxDetails = new System.Windows.Forms.RichTextBox();
             this.comboBoxType = new System.Windows.Forms.ComboBox();
             this.textBoxBalance = new System.Windows.Forms.TextBox();
@@ -38,8 +42,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.textBoxName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.buttonSave = new System.Windows.Forms.Button();
-            this.buttonSaveAndClose = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -54,8 +56,36 @@
             this.panel1.Size = new System.Drawing.Size(555, 72);
             this.panel1.TabIndex = 0;
             // 
+            // buttonSave
+            // 
+            this.buttonSave.Image = global::Asrfly.Properties.Resources.Save_2;
+            this.buttonSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonSave.Location = new System.Drawing.Point(14, 12);
+            this.buttonSave.Margin = new System.Windows.Forms.Padding(5);
+            this.buttonSave.Name = "buttonSave";
+            this.buttonSave.Size = new System.Drawing.Size(170, 55);
+            this.buttonSave.TabIndex = 3;
+            this.buttonSave.Text = "حفظ";
+            this.buttonSave.UseVisualStyleBackColor = true;
+            this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
+            // 
+            // buttonSaveAndClose
+            // 
+            this.buttonSaveAndClose.Image = global::Asrfly.Properties.Resources.Save;
+            this.buttonSaveAndClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonSaveAndClose.Location = new System.Drawing.Point(371, 12);
+            this.buttonSaveAndClose.Margin = new System.Windows.Forms.Padding(5);
+            this.buttonSaveAndClose.Name = "buttonSaveAndClose";
+            this.buttonSaveAndClose.Size = new System.Drawing.Size(170, 55);
+            this.buttonSaveAndClose.TabIndex = 2;
+            this.buttonSaveAndClose.Text = "حفظ و غلق";
+            this.buttonSaveAndClose.UseVisualStyleBackColor = true;
+            this.buttonSaveAndClose.Click += new System.EventHandler(this.buttonSaveAndClose_Click);
+            // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label6);
+            this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.richTextBoxDetails);
             this.groupBox1.Controls.Add(this.comboBoxType);
             this.groupBox1.Controls.Add(this.textBoxBalance);
@@ -70,6 +100,26 @@
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "معلومات الصنف";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.ForeColor = System.Drawing.Color.Red;
+            this.label6.Location = new System.Drawing.Point(359, 136);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(20, 30);
+            this.label6.TabIndex = 11;
+            this.label6.Text = "*";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.ForeColor = System.Drawing.Color.Red;
+            this.label5.Location = new System.Drawing.Point(359, 52);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(20, 30);
+            this.label5.TabIndex = 10;
+            this.label5.Text = "*";
             // 
             // richTextBoxDetails
             // 
@@ -144,32 +194,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "اسم الصنف";
             // 
-            // buttonSave
-            // 
-            this.buttonSave.Image = global::Asrfly.Properties.Resources.Save_2;
-            this.buttonSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonSave.Location = new System.Drawing.Point(14, 12);
-            this.buttonSave.Margin = new System.Windows.Forms.Padding(5);
-            this.buttonSave.Name = "buttonSave";
-            this.buttonSave.Size = new System.Drawing.Size(170, 55);
-            this.buttonSave.TabIndex = 3;
-            this.buttonSave.Text = "حفظ";
-            this.buttonSave.UseVisualStyleBackColor = true;
-            this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
-            // 
-            // buttonSaveAndClose
-            // 
-            this.buttonSaveAndClose.Image = global::Asrfly.Properties.Resources.Save;
-            this.buttonSaveAndClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonSaveAndClose.Location = new System.Drawing.Point(371, 12);
-            this.buttonSaveAndClose.Margin = new System.Windows.Forms.Padding(5);
-            this.buttonSaveAndClose.Name = "buttonSaveAndClose";
-            this.buttonSaveAndClose.Size = new System.Drawing.Size(170, 55);
-            this.buttonSaveAndClose.TabIndex = 2;
-            this.buttonSaveAndClose.Text = "حفظ و غلق";
-            this.buttonSaveAndClose.UseVisualStyleBackColor = true;
-            this.buttonSaveAndClose.Click += new System.EventHandler(this.buttonSaveAndClose_Click);
-            // 
             // AddCategoryForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 30F);
@@ -177,7 +201,7 @@
             this.ClientSize = new System.Drawing.Size(555, 605);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel1);
-            this.Font = new System.Drawing.Font("Cairo", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Cairo", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
             this.MaximizeBox = false;
@@ -190,6 +214,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "اضافة/تعديل صنف";
             this.TopMost = true;
+            this.Load += new System.EventHandler(this.AddCategoryForm_Load);
             this.panel1.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -211,5 +236,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button buttonSave;
         private System.Windows.Forms.Button buttonSaveAndClose;
+        private Label label6;
+        private Label label5;
     }
 }

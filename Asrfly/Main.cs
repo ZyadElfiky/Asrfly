@@ -36,7 +36,7 @@ namespace Asrfly
         private void buttonCategories_Click(object sender, EventArgs e)
         {
             // Load Categories Page
-            pageManager.LoadPage(Gui.CategoriesGui.CategoryUserControl.Instance());
+            pageManager.LoadPage(Gui.GuiCategories.CategoryUserControl.Instance());
         }
     }
 }

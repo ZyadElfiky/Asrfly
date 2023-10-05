@@ -1,4 +1,4 @@
-﻿namespace Asrfly.Gui.CategoriesGui
+﻿namespace Asrfly.Gui.GuiCategories
 {
     partial class CategoryUserControl
     {
@@ -28,20 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.buttonAdd = new System.Windows.Forms.Button();
             this.buttonDelete = new System.Windows.Forms.Button();
             this.buttonEdit = new System.Windows.Forms.Button();
+            this.buttonReload = new System.Windows.Forms.Button();
             this.buttonExport = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.textBoxSearch = new System.Windows.Forms.TextBox();
             this.buttonSearch = new System.Windows.Forms.Button();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.comboBoxPageNo = new System.Windows.Forms.ComboBox();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -54,6 +56,7 @@
             this.flowLayoutPanel1.Controls.Add(this.buttonAdd);
             this.flowLayoutPanel1.Controls.Add(this.buttonDelete);
             this.flowLayoutPanel1.Controls.Add(this.buttonEdit);
+            this.flowLayoutPanel1.Controls.Add(this.buttonReload);
             this.flowLayoutPanel1.Controls.Add(this.buttonExport);
             this.flowLayoutPanel1.Controls.Add(this.panel1);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -101,11 +104,24 @@
             this.buttonEdit.UseVisualStyleBackColor = true;
             this.buttonEdit.Click += new System.EventHandler(this.buttonEdit_Click);
             // 
+            // buttonReload
+            // 
+            this.buttonReload.Image = global::Asrfly.Properties.Resources.Available_Updates;
+            this.buttonReload.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonReload.Location = new System.Drawing.Point(689, 5);
+            this.buttonReload.Margin = new System.Windows.Forms.Padding(5);
+            this.buttonReload.Name = "buttonReload";
+            this.buttonReload.Size = new System.Drawing.Size(135, 55);
+            this.buttonReload.TabIndex = 6;
+            this.buttonReload.Text = "تحديث";
+            this.buttonReload.UseVisualStyleBackColor = true;
+            this.buttonReload.Click += new System.EventHandler(this.buttonReload_Click);
+            // 
             // buttonExport
             // 
             this.buttonExport.Image = global::Asrfly.Properties.Resources.Export_CSV;
             this.buttonExport.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonExport.Location = new System.Drawing.Point(689, 5);
+            this.buttonExport.Location = new System.Drawing.Point(544, 5);
             this.buttonExport.Margin = new System.Windows.Forms.Padding(5);
             this.buttonExport.Name = "buttonExport";
             this.buttonExport.Size = new System.Drawing.Size(135, 55);
@@ -119,7 +135,7 @@
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.textBoxSearch);
             this.panel1.Controls.Add(this.buttonSearch);
-            this.panel1.Location = new System.Drawing.Point(185, 5);
+            this.panel1.Location = new System.Drawing.Point(40, 5);
             this.panel1.Margin = new System.Windows.Forms.Padding(5);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(494, 55);
@@ -156,28 +172,15 @@
             this.buttonSearch.UseVisualStyleBackColor = false;
             this.buttonSearch.Click += new System.EventHandler(this.buttonSearch_Click);
             // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
-            // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Cairo", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 70);
-            this.dataGridView1.Name = "dataGridView1";
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Cairo", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -185,18 +188,50 @@
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Cairo", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView1.Location = new System.Drawing.Point(0, 70);
+            this.dataGridView1.Name = "dataGridView1";
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Cairo", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dataGridView1.Size = new System.Drawing.Size(1264, 538);
             this.dataGridView1.TabIndex = 1;
             this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
+            // 
+            // comboBoxPageNo
+            // 
+            this.comboBoxPageNo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.comboBoxPageNo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxPageNo.FormattingEnabled = true;
+            this.comboBoxPageNo.Location = new System.Drawing.Point(9, 567);
+            this.comboBoxPageNo.Name = "comboBoxPageNo";
+            this.comboBoxPageNo.Size = new System.Drawing.Size(121, 38);
+            this.comboBoxPageNo.TabIndex = 2;
+            this.comboBoxPageNo.SelectedIndexChanged += new System.EventHandler(this.comboBoxPageNo_SelectedIndexChanged);
             // 
             // CategoryUserControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 30F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.comboBoxPageNo);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Font = new System.Drawing.Font("Cairo", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -221,8 +256,9 @@
         private System.Windows.Forms.Button buttonExport;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button buttonSearch;
-        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.TextBox textBoxSearch;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private Button buttonReload;
+        private ComboBox comboBoxPageNo;
     }
 }
